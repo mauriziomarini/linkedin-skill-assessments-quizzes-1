@@ -1,0 +1,18 @@
+Public Function CountPairs(socks As Integer()) As Integer
+  'Count the number of occurrences of each color.
+  Dim counts As Dictionary(Of Integer, Integer) = New Dictionary(Of Integer, Integer)
+  For Each sock In socks
+    If Not counts.ContainsKey(sock) Then
+      counts.Add(sock, 0)
+    End If
+    counts(sock) += 1
+  Next
+
+  'Count the number of pairs.
+  Dim pairs As Integer = 0
+  For Each count In counts.Values
+    pairs += count / 2
+  Next
+
+  Return pairs
+End Function
