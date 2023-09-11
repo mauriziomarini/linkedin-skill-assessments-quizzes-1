@@ -184,8 +184,10 @@ SELECT @UniqueID AS Result;
 
 - [ ] ALTER USER Sharon WITH DEFAULT_SCHEMA = Sales;
 - [ ] ALTER USER Sharon SET SCHEMA Sales;
-- [x] CREATE SCHEMA Sales SET OWNER Sharon;
-- [ ] CREATE SCHEMA Sales AUTHORIZATION Sharon;
+- [ ] CREATE SCHEMA Sales SET OWNER Sharon;
+- [x] CREATE SCHEMA Sales AUTHORIZATION Sharon;
+      
+[Reference](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-schema-transact-sql?view=sql-server-ver16)
 
 #### Q21. The result of a CROSS JOIN between a table with 4 rows, and one with 5 rows, will give with \_\_\_\_ rows.
 
